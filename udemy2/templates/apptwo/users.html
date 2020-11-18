@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake users</title>
+</head>
+<body>
+
+    <h1>Here are all the fake users</h1>
+
+    <div class="users">
+    {% if fake %}
+        <ol>
+            {% for i in fake %}
+            <li>User info</li>
+        <ul class= "{% cycle 'row3' 'row3' 'row3' %}" >
+            <li class="row1"> <b>First Name</b> {{i.first_name |upper}}</li>
+            <li class="row2"><b>Last Name</b> {{i.last_name}}</li>
+            <li class=row3" style="color:red">Email {{i.email}}</li>
+
+        </ul>
+             {% endfor %}
+        </ol>
+
+    {% else %}
+            <p>No fake users available</p>
+
+    {% endif %}
+
+    </div>
+
+
+
+</body>
+</html>

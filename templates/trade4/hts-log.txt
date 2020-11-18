@@ -1,0 +1,21 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 13 Oct 2020 10:32:51 at https://quixlab.com/demo/tradix/dark/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://quixlab.com/demo/tradix/dark/index.html -O1 "E:\trade4" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+10:32:57	Warning: 	Note: due to https://quixlab.com remote robots.txt rules, links beginning with these path will be forbidden: /wp-admin/ (see in the options to disable this)
+10:34:41	Error: 	"Not Found" (404) at link https://quixlab.com/demo/tradix/dark/vendor/owl-carousel/css/owl.video.play.png (from https://quixlab.com/demo/tradix/dark/vendor/owl-carousel/css/owl.carousel.min.css)
+10:42:00	Warning: 	Retry after error -2 (Receive Time Out) at link https://quixlab.com/demo/tradix/dark/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.svg?v=2.4.85 (from https://quixlab.com/demo/tradix/dark/icons/material-design-iconic-font/css/materialdesignicons.min.css)
+10:42:00	Warning: 	Retry after error -4 (No data (connection closed)) at link https://quixlab.com/demo/tradix/dark/images/profile/2.png (from https://quixlab.com/demo/tradix/dark/accounts.html)
+10:42:00	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://quixlab.com/demo/tradix/dark/settings-preferences.html (from https://quixlab.com/demo/tradix/dark/settings.html)
+10:42:00	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://quixlab.com/demo/tradix/dark/settings-security.html (from https://quixlab.com/demo/tradix/dark/settings.html)
+10:42:02	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://quixlab.com/demo/tradix/dark/settings-account.html (from https://quixlab.com/demo/tradix/dark/settings.html)
+10:42:31	Warning: 	Retry after error -4 (No data (connection closed)) at link https://quixlab.com/demo/tradix/dark/images/profile/2.png (from https://quixlab.com/demo/tradix/dark/accounts.html)
+10:42:58	Error: 	"Not Found" (404) at link https://quixlab.com/demo/tradix/dark/front.jpg (from https://quixlab.com/demo/tradix/dark/verify-step-2.html)
+10:42:58	Error: 	"Not Found" (404) at link https://quixlab.com/demo/tradix/dark/back.jpg (from https://quixlab.com/demo/tradix/dark/verify-step-2.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 10 minutes 9 seconds : 151 links scanned, 141 files written (14286155 bytes overall) [14620221 bytes received at 24006 bytes/sec], 3.4 requests per connection
+(3 errors, 7 warnings, 0 messages)

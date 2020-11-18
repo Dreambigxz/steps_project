@@ -1,0 +1,30 @@
+{% extends 'advanceapp/home.html' %}
+{% block body_block  %}
+
+<div class="container">
+    <div class="jumbotron">
+
+        <h1>{% if not form.instance.id %}
+            Create School
+
+            {% else %}
+            Update View
+
+            {% endif %}
+        </h1>
+
+
+
+        <form action="" method="Post">
+
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <input class="btn btn-secondary" type="submit" value="Submit">
+        </form>
+
+
+    </div>
+</div>
+
+{% endblock %}

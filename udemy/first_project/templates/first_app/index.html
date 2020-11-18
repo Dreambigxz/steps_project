@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% extends 'first_app/base.html' %}
+{% load static %}
+{% block body_block  %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+
+    <h1>Hi welcome to my webpage</h1>
+    <p>I just interact with view model and Html cheers!</p>
+
+
+
+   <div class="mydjango">
+       {% if accr %}
+            <table>
+                <thead>
+                      <th>Site name</th>
+
+                      <th>Date Accessed</th>
+                 </thead>
+
+
+
+       {% for i in accr %}
+
+                <tr>
+                    <td>{{i.name}}</td>
+                    <td>{{i.date}}</td>
+
+       {% endfor %}
+                </tr>
+
+            </table>
+
+       {% else %}
+
+            <p>No record found</p>
+       {% endif %}
+   </div>
+
+
+{% endblock %}
+
+
+</body>
+</html>

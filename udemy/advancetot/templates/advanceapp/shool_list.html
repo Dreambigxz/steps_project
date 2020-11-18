@@ -1,0 +1,29 @@
+{% extends 'advanceapp/home.html' %}
+{% block body_block  %}
+
+
+
+
+<div class="container">
+    <div class="jumbotron">
+        <p> Welcome to the list view</p>
+
+
+        <ol>
+        {% for school in object_list %}
+           <li> <a  href="{% url 'detail' school.id %}"> {{school.schoolName }}</a></li>
+        {% endfor %}
+        </ol>
+
+    <a href="{% url 'create'  %}">Create new view</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

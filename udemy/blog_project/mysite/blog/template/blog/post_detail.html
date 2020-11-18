@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% extends 'blog/header.html' %}
+{% block body_block %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+
+
+    <div class="container">
+        <h1>This are all the Details of this news</h1>
+
+        <ol>
+            <p>Author: {{post.author}}</p><br>
+            <p>Headline: {{post.tittle}}</p><br>
+            <p>News: {{post.text}}</p><br>
+            <p>Balance: {{post.balance}}</p><br>
+            <p>Created Date: {{post.created_date}}</p><br>
+
+
+        </ol>
+
+            {% if user.is_authenticated %}
+
+            <a class=" btn btn-primary" href="{% url 'edit' post.id %}">Edit</a> <a class=" btn btn-danger" href="{% url 'delete' post.id %}">Delete</a>
+
+            {% endif %}
+        <h1>Comments</h1>
+
+        {% for comment in post.comment_set.all %}
+        {{ comment.count }}
+         {% if comment.approved_comment %}
+
+            <p>comment: {{comment.text}}</p><br>
+            <p>Posted by: {{comment.author}}</p><br>
+            <p>Created Date: {{comment.create_date}}</p><br>
+
+            {% elif user.is_authenticated %}
+
+                <a class="btn btn-secondary" href="{% url 'approve_comment' comment.id %}">Approve comment</a>
+                <a class="btn btn-danger" href="{% url 'delete_comment' comment.id %}">Delete comment</a>
+                <p>comment: {{comment.text}}</p><br>
+
+            {% else %}
+
+                <p>Waiting for aproval</p>
+
+        {% endif %}
+
+        {% endfor %}
+
+        <a class="btn btn-secondary" href="{% url 'comment' post.id %}">Add comment</a>
+
+
+
+    </div>
+
+</body>
+
+{% endblock %}
+</html>

@@ -1,0 +1,32 @@
+{% extends 'first_app/base.html' %}
+{% load static %}
+{% block body_block  %}
+
+<div class="container">
+    <div class="jumbotron">
+
+        {% if user.is_authenticated %}
+        <p>You are log in </p>
+
+        {% else %}
+        <form action="" method="Post">
+            {% csrf_token %}
+            <label for="username">User Name</label>
+            <input id="username" type="text" name="username" value="" placeholder="Enter username">
+            <label for="pass">Password</label>
+            <input id="pass" type="password" name="password" value="" placeholder="Enter Password">
+            <input class="btn btn-primary" type="submit" value="LOGIN">
+        {% endif %}
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+{%endblock %}

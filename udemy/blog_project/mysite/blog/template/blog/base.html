@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+{% extends 'blog/header.html' %}
+{% block body_block %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+
+        <div class="">
+        <div class="jumbotron">
+
+
+
+            {% if user.is_authenticated %}
+
+            <h1> Welcome  <span class="user">{{user.username}}</span></h1>
+             <a class="btn btn-danger" href="">Logout</a>
+            {% else %}
+                <p>Welcome to my Blog post. Please Login to see all post</p>
+            <a class="btn btn-primary" href="">Login</a>
+            {% endif %}
+
+        </div>
+
+        </div>
+
+
+</body>
+{%endblock%}
+</html>
+
+
+
+
+

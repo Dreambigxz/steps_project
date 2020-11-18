@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+quixlab.com	TRUE	/	FALSE	1999999999	PHPSESSID	2ee885bc2615ef33c42c5fc14a3f81b5
+

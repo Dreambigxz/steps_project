@@ -1,0 +1,13 @@
+h1{
+
+   font-size: 34px;
+   color: red;
+
+}
+
+table, th, td{
+
+
+    margin: auto;
+    border: 2px solid red;
+}

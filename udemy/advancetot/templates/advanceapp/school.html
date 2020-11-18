@@ -1,0 +1,28 @@
+{% extends 'advanceapp/home.html' %}
+{% block body_block  %}
+
+
+
+
+<div class="container">
+    <div class="jumbotron">
+        <p> Welcome to the Fuction Base view</p>
+
+        <ol>
+        {% for school in school %}
+            <li> <a href="{% url 'student' school.id %}">{{school.schoolName }}</a></li>
+        {% endfor %}
+        </ol>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

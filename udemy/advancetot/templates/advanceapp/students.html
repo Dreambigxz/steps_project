@@ -1,0 +1,32 @@
+{% extends 'advanceapp/home.html' %}
+{% block body_block  %}
+
+
+
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>This school: {{school.schoolName}}</h1>
+        <h1>Principal: {{school.principal}}</h1>
+        <h1>Location: {{school.location}}</h1>
+
+        <p>Has the following student</p>
+
+        <ol>
+        {% for student in school.students_set.all %}
+            <li>{{student.name}}, Who is {{student.age}} Years Old. </li>
+        {% endfor %}
+        </ol>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}
